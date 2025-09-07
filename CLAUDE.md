@@ -38,7 +38,27 @@ This is a **ROBOTIS OP3 workspace** - a ROS 2 workspace containing packages for 
 ## Build System
 This project uses **ROS 2 colcon** build system with **ament_cmake**.
 
-### Essential Commands
+### ROBOTIS CLI Tool (Recommended)
+The workspace includes a comprehensive Python CLI tool for streamlined operations:
+
+```bash
+# Activate virtual environment (required)
+source venv/bin/activate
+
+# Launch the CLI tool
+python3 robotis_cli.py
+# or
+./robotis_cli.py
+```
+
+**CLI Features:**
+- **🔨 Colcon Build Options**: Interactive build configurations with parallel worker control
+- **🧹 Clean Workspace**: Selective cleanup of build/install/log directories with size analysis
+- **🗂️ Git Repository Cleanup**: Management of nested .git repositories for monorepo conversion
+- **Real-time output**: Live build progress with timing and error handling
+- **Safety confirmations**: Prevents accidental operations with user prompts
+
+### Traditional Commands (Manual)
 ```bash
 # Build entire workspace
 colcon build
@@ -55,6 +75,22 @@ source install/setup.bash
 # Clean build
 rm -rf build/ install/ log/
 colcon build
+```
+
+### CLI Tool Setup
+```bash
+# Install required packages (one-time setup)
+sudo apt install python3.12-venv python3-full -y
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install inquirer
+
+# Run the tool
+python3 robotis_cli.py
 ```
 
 ### Memory Management

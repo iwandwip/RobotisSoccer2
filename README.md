@@ -9,13 +9,33 @@ A complete ROS 2 Jazzy workspace for ROBOTIS OP3 humanoid robot development and 
 - ROS 2 Jazzy installed
 - 8GB+ RAM recommended
 
-### Build Workspace
+### Option 1: CLI Tool Setup (Recommended) 🚀
 ```bash
 # Clone this workspace
-git clone <your-repo-url> ~/robotis_ws
+git clone https://github.com/iwandwip/RobotisSoccer2.git ~/robotis_ws
 cd ~/robotis_ws
 
-# Install dependencies
+# Install Python environment tools
+sudo apt install python3.12-venv python3-full -y
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install CLI dependencies
+pip install inquirer
+
+# Launch interactive CLI tool
+python3 robotis_cli.py
+```
+
+### Option 2: Traditional Build
+```bash
+# Clone this workspace
+git clone https://github.com/iwandwip/RobotisSoccer2.git ~/robotis_ws
+cd ~/robotis_ws
+
+# Install ROS dependencies
 rosdep install --from-paths src --ignore-src -r -y
 
 # Build workspace
@@ -140,8 +160,11 @@ All documentation is organized chronologically in `docs/`:
 | [009_webots_simulation_setup_guide.md](docs/009_webots_simulation_setup_guide.md) | Complete Webots setup |
 | [010_working_simulation_commands.md](docs/010_working_simulation_commands.md) | ✅ **TESTED COMMANDS** |
 | [011_wsl2_x11_forwarding_setup.md](docs/011_wsl2_x11_forwarding_setup.md) | X11 GUI setup for WSL2 |
+| [012_pip_installation_guide.md](docs/012_pip_installation_guide.md) | Python pip installation guide |
+| [013_virtual_environment_setup.md](docs/013_virtual_environment_setup.md) | Python venv setup and PEP 668 solutions |
 
 > 💡 **Start with [010_working_simulation_commands.md](docs/010_working_simulation_commands.md)** for tested, working commands!
+> 🐍 **For Python development**: See [013_virtual_environment_setup.md](docs/013_virtual_environment_setup.md)
 
 ## 🚀 Simulation Options
 
@@ -184,9 +207,36 @@ This workspace is **WSL2-friendly**! See our guides:
 - **Vision Demo** - Face tracking and following
 - **Action Demo** - Motion sequence demonstration
 
-## 🔧 Build Tips
+## 🔧 Build & Development Tools
 
-### Parallel Build Optimization
+### ROBOTIS CLI Tool Features 🛠️
+
+**Interactive Workspace Management:**
+```bash
+# Launch the CLI tool (after venv activation)
+python3 robotis_cli.py
+```
+
+**🔨 Colcon Build Options:**
+- Basic build
+- Symlink install (for development)
+- Parallel workers (1, 2, custom)  
+- Clean build (removes build artifacts first)
+- Real-time progress with timing
+
+**🧹 Clean Workspace:**
+- Clean all directories (build/install/log)
+- Selective directory cleanup
+- Directory size analysis
+- Detailed file information
+
+**🗂️ Git Repository Cleanup:**
+- Scan for nested .git repositories
+- Safe removal with confirmations
+- Convert to monorepo structure
+- Show detailed git information
+
+### Traditional Build Commands
 ```bash
 # Standard build
 colcon build
@@ -201,7 +251,7 @@ colcon build --parallel-workers 2
 colcon build --packages-select op3_gui_demo
 ```
 
-### Clean Build (if issues)
+### Manual Clean Build (if issues)
 ```bash
 rm -rf build/ install/ log/
 colcon build
