@@ -1,0 +1,13 @@
+/**:
+  ros__parameters:
+    brightness: 128
+    contrast: 128
+    saturation: 128
+    sharpness: 128
+    gain: 0
+    focus_automatic_continuous: false
+    focus_absolute: 0
+    auto_exposure: 1
+    exposure_time_absolute: 250
+    white_balance_automatic: false
+    white_balance_temperature: 4000

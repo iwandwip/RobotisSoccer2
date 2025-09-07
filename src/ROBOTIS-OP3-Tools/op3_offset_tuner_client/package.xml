@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_offset_tuner_client</name>
+  <version>0.2.0</version>
+  <description>
+    thormang3_offset_tuner_client
+  </description>
+  <license>Apache License 2.0</license>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ament_index_cpp</depend>
+  <depend>rqt_gui</depend>
+  <depend>rqt_gui_cpp</depend>
+  <depend>rclcpp</depend>
+  <depend>rosidl_default_runtime</depend>
+  <depend>op3_offset_tuner_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <export>                               
+    <build_type>ament_cmake</build_type> 
+  </export> 
+</package>

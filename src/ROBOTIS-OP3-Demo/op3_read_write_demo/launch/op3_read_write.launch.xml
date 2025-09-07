@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<launch>
+        
+    <!-- OP3 Manager -->
+    <node pkg="op3_manager" exec="op3_manager" output="screen">
+        <param name="angle_unit" value="30.0" />
+
+        <param name="gazebo" value="false"/>
+        <param name="gazebo_robot_name" value="robotis_op3"/>
+            
+        <param name="offset_file_path" value="$(find-pkg-share op3_manager)/config/offset.yaml"/>
+        <param name="robot_file_path" value="$(find-pkg-share op3_manager)/config/OP3.robot"/>
+        <param name="init_file_path" value="$(find-pkg-share op3_manager)/config/dxl_init_OP3.yaml"/>
+        <param name="device_name" value="/dev/ttyUSB0"/>
+        
+        <param name="/robotis/direct_control/default_moving_time" value="0.04"/>
+        <param name="/robotis/direct_control/default_moving_angle" value="90.0"/>
+    </node>
+
+    <!-- OP3 Localization -->
+    <node pkg="op3_localization" exec="op3_localization" output="screen"/>
+    
+    <!-- OP3 Read-Write demo -->
+    <node pkg="op3_read_write_demo" exec="read_write" output="screen"/>
+</launch>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_action_editor</name>
+  <version>0.2.2</version>
+  <description>
+    The op3_action_editor package provides editor tool to make motion.
+  </description>
+  <license>Apache 2.0</license>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <author>Jay Song</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/op3_action_editor</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/op3/introduction/</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Tools</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Tools/issues</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>  
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>dynamixel_sdk</depend>
+  <depend>robotis_controller</depend>
+  <depend>robotis_device</depend>
+  <depend>op3_action_module</depend>
+  <depend>op3_base_module</depend>
+  <depend>libncurses-dev</depend>
+  <depend>yaml-cpp</depend>
+  <exec_depend>op3_manager</exec_depend>
+  <exec_depend>ros_mpg321_player</exec_depend>
+  <export>                               
+    <build_type>ament_cmake</build_type> 
+  </export> 
+
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  <depend>rclpy</depend>
+
+</package>

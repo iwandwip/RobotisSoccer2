@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_gui_demo</name>
+  <version>0.3.0</version>
+  <description>op3_gui_demo</description>
+  <license>Apache-2.0</license>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ament_index_cpp</depend>
+  <depend>rqt_gui</depend>
+  <depend>rqt_gui_cpp</depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>interactive_markers</depend>
+  <depend>eigen</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>robotis_controller_msgs</depend>
+  <depend>op3_walking_module_msgs</depend>
+  <depend>op3_online_walking_module_msgs</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

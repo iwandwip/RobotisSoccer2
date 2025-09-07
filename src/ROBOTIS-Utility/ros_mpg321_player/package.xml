@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ros_mpg321_player</name>
+  <version>0.1.3</version>
+  <description>
+    This package is a node that can play mp3 files.
+    This package uses mpg321, which is a command-line mp3 player.
+  </description>
+  <license>Apache-2.0</license>
+  <author email="zerom@robotis.com">Zerom</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/ros_mpg321_player</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-Utility</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-Utility/issues</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_bringup</name>
+  <version>0.1.0</version>
+  <description>
+    This package is a demo for first time users.
+    There is an example in the demo where you can run and visualize the robot.
+  </description>
+  <license>Apache 2.0</license>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="website">http://wiki.ros.org/op3_bringup</url>
+  <url type="emanual">http://emanual.robotis.com/docs/en/platform/op3/introduction/</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Demo</url>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Demo/issues</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>op3_manager</depend>
+  <depend>op3_description</depend>
+  <depend>usb_cam</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz2</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

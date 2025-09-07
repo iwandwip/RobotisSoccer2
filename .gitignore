@@ -1,0 +1,11 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Cline artifacts
+.clinerules-architect
+.clinerules-ask
+.clinerules-code
+.clinerules-debug
+.clinerules-test
